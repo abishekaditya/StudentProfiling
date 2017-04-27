@@ -1,0 +1,5 @@
+<h1>Course</h1>
+<% @cors.each do |i|%>
+    <%= link_to(i.code,'../course/new/' + i.id.to_s) %>
+<% end %>
+<%= link_to("Home",root_path) %>

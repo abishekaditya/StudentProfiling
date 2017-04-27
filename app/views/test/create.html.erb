@@ -1,0 +1,8 @@
+<h1>Test Create</h1>
+<h1>create test</h1>
+<%= form_tag("/course/submit", method: "post") do %>
+    <%= label_tag(:test, "Enter Name") %>
+    <%= text_field_tag(:test) %>
+    <%= submit_tag("Create") %>
+<% end %>
+

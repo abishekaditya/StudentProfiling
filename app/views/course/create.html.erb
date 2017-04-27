@@ -1,0 +1,9 @@
+<h1>Course#create</h1>
+<h1>create course</h1>
+<%= form_tag("/course/create", method: "post") do %>
+    <%= label_tag(:code, "Enter Code") %>
+    <%= text_field_tag(:code) %>
+    <%= submit_tag("Create") %>
+<% end %>
+
+<%= link_to("Home",root_path)%>

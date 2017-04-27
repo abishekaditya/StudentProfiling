@@ -1,0 +1,19 @@
+<h1> Student Analysis </h1>
+<table>
+<% @students.each do |i| %>
+      <tr>
+        <td><%= i.email %></td>
+        <td><% x = i.intelligence %>
+          <% if x > 4 %>
+              <%= "Intelligent" %>
+            <%elsif x > 3  %> <%= "May or may not be intelligent" %>
+            <% elsif x > 2 %><%= "Medium" %>
+            <% elsif x > 1 %> <%= "May or may not be poor" %>
+            <%else%><%= "Poor" %>
+            <%end%>
+        </td>
+      </tr>
+<%end%>
+</table>
+
+<%= link_to("Home",root_path) %>

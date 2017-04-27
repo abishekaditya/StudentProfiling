@@ -1,0 +1,19 @@
+<h1> Question Analysis </h1>
+<table>
+  <% @questions.each do |i| %>
+      <tr>
+        <td><%= i.question %></td>
+        <td><% x = i.toughness %>
+          <% if x > 4 %>
+              <%= "Tough" %>
+          <%elsif x > 3  %> <%= "May or may not be tough" %>
+              <% elsif x > 2 %><%= "Medium" %>
+          <% elsif x > 1 %> <%= "May or may not be easy" %>
+              <%else%><%= "Easy" %>
+          <%end%>
+        </td>
+      </tr>
+  <%end%>
+</table>
+
+<%= link_to("Home",root_path) %>

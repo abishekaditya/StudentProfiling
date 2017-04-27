@@ -1,0 +1,15 @@
+<%= form_tag("/questions/submitted", method: "post") do %>
+<% @questions.each do |q| %>
+    <p><%= q.question %></p>
+    <%= label("post",q.a) %>
+    <%= radio_button(:post, q.id, 'a') %>
+        <%= label("post",q.b) %>
+    <%= radio_button(:post, q.id, 'b') %>
+        <%= label("post",q.c) %>
+    <%= radio_button(:post, q.id, 'c') %>
+        <%= label("post",q.d) %>
+    <%= radio_button(:post, q.id, 'd') %>
+<% end %>
+
+    <%= submit_tag("Submit") %>
+<% end %>

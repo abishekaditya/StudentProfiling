@@ -1,0 +1,18 @@
+<h1>Questions#add</h1>
+<p>Find me in app/views/questions/add.html.erb</p>
+<%= form_tag("/questions/submit", method: "post") do %>
+<%= select("post", "code", @courses ,include_blank: true )%>
+    <%= label_tag(:question, "Enter Question") %>
+    <%= text_field_tag(:question) %>
+    <%= label_tag(:a, "A") %>
+    <%= text_field_tag(:a) %>
+    <%= label_tag(:b, "B") %>
+    <%= text_field_tag(:b) %>
+    <%= label_tag(:c, "C") %>
+    <%= text_field_tag(:c) %>
+    <%= label_tag(:d, "D") %>
+    <%= text_field_tag(:d) %>
+    <%= label_tag(:asnswer, "Answer") %>
+    <%= select("post", "answer", ['a','b','c','d'] ,include_blank: true )%>
+    <%= submit_tag("Create") %>
+<% end %>

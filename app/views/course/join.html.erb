@@ -1,0 +1,8 @@
+<h1>join course</h1>
+
+<%= form_tag("/course/join", method: "post") do %>
+    <%= label_tag(:code, "Enter Code") %>
+    <%= text_field_tag(:code) %>
+    <%= submit_tag("Join") %>
+<% end %>
+<%= link_to("Home",root_path) %>
